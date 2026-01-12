@@ -99,13 +99,25 @@ body {
 }
 
 /* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;      /* allow tags to wrap to next line */
+    gap: 0.5rem 0.75rem;  /* vertical and horizontal spacing */
+    margin-top: 1.5rem;
+}
+
 .tag {
+    display: inline-block;        /* ensures proper width */
     background: rgba(59,130,246,.12);
     border: 1px solid rgba(59,130,246,.35);
     color: var(--accent-color);
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
+    font-size: 0.9rem;
+    line-height: 1.3;             /* adds vertical spacing inside the tag */
+    word-break: break-word;       /* ensures long text wraps inside the tag */
 }
+
 
 /* SECTIONS */
 .section { padding: 6rem 0; }
