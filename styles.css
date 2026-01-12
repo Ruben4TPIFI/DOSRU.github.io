@@ -82,6 +82,13 @@ body {
     align-items: center;
 }
 
+.hero-text {
+    display: flex;
+    flex-direction: column; /* stack text and tags */
+    gap: 1rem;              /* space between paragraph and tags */
+    max-width: 600px;       /* optional: prevent stretching too wide */
+}
+
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
