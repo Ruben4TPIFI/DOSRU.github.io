@@ -12,6 +12,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 });
             }
         }
+
+        // Close mobile menu on click
+        const navMenu = document.querySelector('.nav-menu');
+        const hamburger = document.querySelector('.hamburger');
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.classList.remove('menu-active');
+        }
     });
 });
 
@@ -24,7 +33,7 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 link.classList.remove('active');
@@ -57,6 +66,16 @@ document.querySelectorAll('.card, .project-card, .certificate-card, .award-card'
     element.style.transform = 'translateY(20px)';
     element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(element);
+});
+
+// Hamburger toggle for mobile menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    document.body.classList.toggle('menu-active');
 });
 
 console.log('Portfolio website loaded successfully!');
