@@ -6,14 +6,17 @@
 }
 
 :root {
-    --primary-bg: #0a0e17;
-    --secondary-bg: #111827;
-    --card-bg: #1a2332;
-    --accent-color: #10b981;
-    --accent-hover: #34d399;
+    --primary-bg: #0a0f1f;        /* Deep navy */
+    --secondary-bg: #0f172a;      /* Dark blue-gray */
+    --card-bg: #111c33;           /* Slightly lighter for cards */
+
+    --accent-color: #3b82f6;      /* Modern blue (Tailwind blue-500) */
+    --accent-hover: #60a5fa;      /* Lighter hover blue */
+
     --text-primary: #ffffff;
-    --text-secondary: #9ca3af;
-    --border-color: #374151;
+    --text-secondary: #94a3b8;    /* Soft blue-gray text */
+
+    --border-color: #1e293b;      /* Blue-tinted dark border */
 }
 
 html {
