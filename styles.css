@@ -76,6 +76,12 @@ body {
     background: linear-gradient(135deg,#0a0f1f,#0f172a);
 }
 
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
