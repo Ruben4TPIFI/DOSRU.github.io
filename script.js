@@ -24,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add active state to navigation on scroll
+// Highlight active nav on scroll
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const scrollPosition = window.scrollY + 100;
@@ -45,13 +45,13 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Optional: Add fade-in animation on scroll
+// Fade-in animation on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const fadeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -60,15 +60,15 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all cards and sections
-document.querySelectorAll('.card, .project-card, .certificate-card, .award-card').forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(element);
+// Observe cards + sections
+document.querySelectorAll('.card, .skill-card, .contact-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    fadeObserver.observe(el);
 });
 
-// Hamburger toggle for mobile menu
+// Hamburger toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
