@@ -17,6 +17,47 @@
     --border-color: #1e293b;
 }
 
+/* ============================= */
+/* HOME PAGE HERO (RESTORED) */
+/* ============================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #0a0f1f, #0f172a);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
     background: var(--primary-bg);
