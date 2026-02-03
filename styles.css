@@ -366,3 +366,49 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ============================= */
+/* PROJECT DESCRIPTION STRUCTURE */
+/* ============================= */
+
+/* Individual description blocks */
+.project-page .project-section {
+    margin-top: 1.5rem;
+}
+
+/* Section titles (Overview, What it does, etc.) */
+.project-page .project-section h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 0.4rem;
+}
+
+/* Paragraph text */
+.project-page .project-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* Lists */
+.project-page .project-section ul {
+    margin-top: 0.3rem;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+/* List items */
+.project-page .project-section li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Optional: subtle divider between sections */
+.project-page .project-section:not(:last-child) {
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+}
