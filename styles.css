@@ -93,15 +93,12 @@ body {
     transition: 0.3s;
 }
 
-/* Hamburger animation */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 }
@@ -143,7 +140,6 @@ body {
     filter: grayscale(100%);
     transition: 0.25s ease;
 }
-
 .social-logo:hover {
     filter: grayscale(0%);
     transform: scale(1.15);
@@ -174,7 +170,8 @@ body {
 /* CARDS */
 .card,
 .skill-card,
-.contact-card {
+.contact-card,
+.project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 2rem;
@@ -182,7 +179,8 @@ body {
     transition: 0.3s;
 }
 
-.card:hover {
+.card:hover,
+.project-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 0 40px rgba(59, 130, 246, .3);
 }
@@ -256,6 +254,68 @@ body {
 
 .btn:hover {
     background: var(--accent-hover);
+}
+
+/* ============================= */
+/* 🔐 CYBERSECURITY PROJECTS */
+/* ============================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Project sections inside card */
+.project-section {
+    margin-bottom: 1rem;
+}
+
+.project-section h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+}
+
+.project-section ul {
+    margin-left: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.project-section ul li {
+    list-style: disc;
+    margin-bottom: 0.25rem;
+}
+
+/* Security Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    color: var(--accent-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
 }
 
 /* FOOTER */
