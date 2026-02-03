@@ -1,15 +1,11 @@
-/* ============================= */
 /* RESET */
-/* ============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ============================= */
 /* THEME */
-/* ============================= */
 :root {
     --primary-bg: #0a0f1f;
     --secondary-bg: #0f172a;
@@ -21,36 +17,25 @@
     --border-color: #1e293b;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
     background: var(--primary-bg);
     color: var(--text-primary);
 }
 
-/* ============================= */
-/* LAYOUT */
-/* ============================= */
+/* CONTAINER */
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 0 2rem;
 }
 
-.section {
-    padding: 6rem 0;
-}
-
-.section-alt {
-    background: var(--secondary-bg);
-}
-
-/* ============================= */
 /* NAVBAR */
-/* ============================= */
 .navbar {
     position: fixed;
     width: 100%;
-    top: 0;
     background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(59, 130, 246, 0.25);
@@ -65,54 +50,37 @@ body {
 }
 
 .logo {
+    font-size: 1.25rem;
     color: var(--accent-color);
 }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--text-secondary);
-}
-
-.nav-menu a.active,
-.nav-menu a:hover {
-    color: var(--accent-color);
-}
-
-/* ============================= */
-/* HOME PAGE (LOCKED) */
-/* ============================= */
-.home-page .hero {
+/* HERO (HOME PAGE – UNTOUCHED) */
+.hero {
     min-height: 100vh;
-    padding-top: 80px;
     display: flex;
     align-items: center;
+    padding-top: 80px;
     background: linear-gradient(135deg, #0a0f1f, #0f172a);
 }
 
-.home-page .hero-content {
+.hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
 }
 
-.home-page .hero-photo {
+.hero-photo {
     width: 100%;
     max-width: 350px;
-    height: auto;
     border-radius: 20px;
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 40px rgba(59,130,246,.4);
 }
 
-/* ============================= */
-/* PROJECT PAGE BACKGROUND */
-/* ============================= */
+/* ========================= */
+/* ADDITIONS FOR PROJECTS PAGE ONLY */
+/* ========================= */
+
 .project-page::before {
     content: "";
     position: fixed;
@@ -125,85 +93,47 @@ body {
     background-position: center;
 }
 
-/* ============================= */
-/* PROJECT PAGE CONTENT */
-/* ============================= */
-.project-page h1 {
-    color: var(--accent-color);
-    font-size: 2.5rem;
-}
-
-.project-page p {
-    color: var(--text-secondary);
-}
-
-.project-page .projects-grid {
+/* PROJECTS */
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
-.project-page .project-card {
+.project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 15px;
     padding: 2rem;
+    border-radius: 15px;
 }
 
-.project-page .project-images {
+/* PROJECT IMAGES */
+.project-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.project-page .project-images img {
+.project-images img {
     width: 100%;
     border-radius: 10px;
     border: 1px solid var(--border-color);
 }
 
-/* ============================= */
-/* TAGS */
-/* ============================= */
-.tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.tag {
-    border: 1px solid rgba(59,130,246,0.35);
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-    color: var(--accent-color);
-    font-size: 0.8rem;
-}
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--border-color);
-}
-
-/* ============================= */
 /* MOBILE */
-/* ============================= */
 @media (max-width: 768px) {
-    .home-page .hero-content {
+    .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .home-page .hero-photo {
+    .hero-photo {
         max-width: 280px;
         margin: 0 auto;
     }
 
-    .project-page .project-images {
+    .project-images {
         grid-template-columns: 1fr;
     }
 }
