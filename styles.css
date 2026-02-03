@@ -412,3 +412,17 @@ footer {
     padding-bottom: 1.2rem;
     border-bottom: 1px solid rgba(30, 41, 59, 0.6);
 }
+
+/* ============================= */
+/* CENTER LANGUAGES CARD */
+/* ============================= */
+
+#languages .skills-grid {
+    display: flex;
+    justify-content: center;
+}
+
+#languages .skill-card {
+    max-width: 500px; /* keeps it readable */
+    width: 100%;
+}
