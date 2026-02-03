@@ -375,4 +375,33 @@ footer {
     background-position: center;
     background-attachment: fixed;
 }
+/* ============================= */
+/* PROJECT IMAGES */
+/* ============================= */
+
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.project-images img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.03);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+}
 
