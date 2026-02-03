@@ -10,17 +10,12 @@
     --primary-bg: #0a0f1f;
     --secondary-bg: #0f172a;
     --card-bg: #111c33;
-
     --accent-color: #3b82f6;
     --accent-hover: #60a5fa;
-
     --text-primary: #ffffff;
     --text-secondary: #94a3b8;
-
     --border-color: #1e293b;
 }
-
-html { scroll-behavior: smooth; }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
@@ -53,355 +48,143 @@ body {
 }
 
 .logo {
-    font-size: 1.25rem;
     color: var(--accent-color);
 }
 
-/* NAV MENU */
 .nav-menu {
     list-style: none;
     display: flex;
     gap: 2rem;
 }
 
-.nav-menu li a {
+.nav-menu a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: 0.3s;
 }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
+.nav-menu a.active,
+.nav-menu a:hover {
     color: var(--accent-color);
-    text-shadow: 0 0 10px rgba(59, 130, 246, .7);
 }
 
 /* HAMBURGER */
 .hamburger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
-    display: block;
-    height: 3px;
     width: 25px;
+    height: 3px;
     background: var(--accent-color);
-    border-radius: 3px;
-    transition: 0.3s;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
-    background: linear-gradient(135deg, #0a0f1f, #0f172a);
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.hero-description {
-    margin-top: 1rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
-}
-
-/* PROFILE PHOTO */
-.hero-photo {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(59, 130, 246, .4);
-}
-
-/* SOCIAL LOGOS */
-.social-logo {
-    width: 32px;
-    height: 32px;
-    filter: grayscale(100%);
-    transition: 0.25s ease;
-}
-.social-logo:hover {
-    filter: grayscale(0%);
-    transform: scale(1.15);
-}
-
-/* SECTION */
+/* SECTIONS */
 .section {
     padding: 6rem 0;
 }
 
 .section-alt {
-    background: var(--secondary-bg);
+    background: rgba(15, 23, 42, 0.85);
 }
 
-.section-title {
-    text-align: center;
+/* PROJECT PAGE BACKGROUND */
+.project-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(10, 15, 31, 0.9), rgba(10, 15, 31, 0.9)),
+        url("./cyber-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* PROJECT HEADER */
+.project-header h1 {
     color: var(--accent-color);
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
 }
 
-/* TIMELINE */
-.timeline {
-    display: grid;
-    gap: 2rem;
-}
-
-/* CARDS */
-.card,
-.skill-card,
-.contact-card,
-.project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 2rem;
-    border-radius: 15px;
-    transition: 0.3s;
-}
-
-.card:hover,
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 40px rgba(59, 130, 246, .3);
-}
-
-/* COMPANY */
-.company {
-    color: var(--accent-color);
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-}
-
-/* DATE */
-.date {
+.project-header p {
     color: var(--text-secondary);
-    font-size: .9rem;
-    margin-bottom: .75rem;
+    max-width: 600px;
 }
 
-/* EXPERIENCE LIST */
-.experience-list {
-    margin-top: .5rem;
-    display: flex;
-    flex-direction: column;
-    gap: .25rem;
-}
-
-.experience-list li {
-    color: var(--text-secondary);
-    font-size: .95rem;
-    line-height: 1.4;
-}
-
-/* EDUCATION LOGOS */
-.school-logo {
-    width: 70px;
-    margin-bottom: 0.75rem;
-    display: block;
-}
-
-/* SKILLS */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.skill-card ul {
-    margin-top: .75rem;
-    display: flex;
-    flex-direction: column;
-    gap: .35rem;
-    color: var(--text-secondary);
-}
-
-/* CONTACT */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-/* BUTTON */
-.btn {
-    background: var(--accent-color);
-    color: white;
-    padding: .7rem 1.6rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: var(--accent-hover);
-}
-
-/* ============================= */
-/* 🔐 CYBERSECURITY PROJECTS */
-/* ============================= */
-
+/* PROJECTS */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
 .project-card h3 {
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
-}
-
-.project-card p {
-    color: var(--text-secondary);
-    line-height: 1.5;
     margin-bottom: 1rem;
 }
 
-/* Project sections inside card */
-.project-section {
-    margin-bottom: 1rem;
-}
-
-.project-section h4 {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--accent-color);
-    margin-bottom: 0.25rem;
-}
-
-.project-section ul {
-    margin-left: 1rem;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.project-section ul li {
-    list-style: disc;
-    margin-bottom: 0.25rem;
-}
-
-/* Security Tags */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.tag {
-    background: rgba(59, 130, 246, 0.15);
-    border: 1px solid rgba(59, 130, 246, 0.35);
-    color: var(--accent-color);
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
-/* FOOTER */
-footer {
-    background: var(--secondary-bg);
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--border-color);
-}
-
-/* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-    .hamburger { display: flex; }
-    
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100vh;
-        background: var(--secondary-bg);
-        flex-direction: column;
-        padding-top: 5rem;
-        gap: 1.2rem;
-        transition: right 0.3s ease-in-out;
-        z-index: 999;
-    }
-
-    .nav-menu.active { right: 0; }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .skills-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ============================= */
-/* PROJECT PAGE BACKGROUND */
-/* ============================= */
-
-.project-page {
-    position: relative;
-    min-height: 100vh;
-    background:
-        linear-gradient(
-            rgba(10, 15, 31, 0.92),
-            rgba(10, 15, 31, 0.92)
-        ),
-        url("./cyber-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-/* ============================= */
 /* PROJECT IMAGES */
-/* ============================= */
-
 .project-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .project-images img {
     width: 100%;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
 }
 
-.project-images img:hover {
-    transform: scale(1.03);
+/* PROJECT CONTENT */
+.project-section h4 {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
-/* Mobile */
+.project-section ul {
+    margin-left: 1rem;
+    color: var(--text-secondary);
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    border: 1px solid rgba(59,130,246,0.35);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    color: var(--accent-color);
+    font-size: 0.8rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-    .project-images {
-        grid-template-columns: 1fr;
-    }
+    .hamburger { display: flex; }
+    .nav-menu { display: none; }
+    .project-images { grid-template-columns: 1fr; }
 }
-
