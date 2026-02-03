@@ -357,3 +357,22 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================= */
+/* PROJECT PAGE BACKGROUND */
+/* ============================= */
+
+.project-page {
+    position: relative;
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(10, 15, 31, 0.92),
+            rgba(10, 15, 31, 0.92)
+        ),
+        url("./cyber-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
