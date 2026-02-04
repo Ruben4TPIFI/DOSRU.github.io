@@ -443,3 +443,27 @@ footer {
 .project-header p {
     line-height: 1.6;
 }
+.project-header {
+    padding: 3.5rem 0; /* was 6rem via .section */
+}
+
+
+/* ============================= */
+/* PROJECT IMAGE HOVER ZOOM */
+/* ============================= */
+
+.project-page .project-images {
+    overflow: hidden;
+}
+
+.project-page .project-images img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: zoom-in;
+}
+
+/* Hover zoom */
+.project-page .project-images img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.35);
+    z-index: 2;
+}
