@@ -426,3 +426,20 @@ footer {
     max-width: 500px; /* keeps it readable */
     width: 100%;
 }
+
+/* ============================= */
+/* PROJECT PAGE HEADER CONTAINER */
+/* ============================= */
+
+.project-header-container {
+    max-width: 720px;   /* controls how “tight” it feels */
+}
+
+/* Optional: fine-tune spacing */
+.project-header h1 {
+    margin-bottom: 0.6rem;
+}
+
+.project-header p {
+    line-height: 1.6;
+}
